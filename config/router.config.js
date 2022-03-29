@@ -92,6 +92,52 @@ export default [
           },
         ],
       },
+      {
+        path: '/category',
+        name: '品类管理',
+        icon: 'dashboard',
+        authority: ['root'],
+        routes: [
+          {
+            path: '/category/list',
+            name: '品类列表',
+            icon: 'dashboard',
+            component: './Category/List',
+          },
+          {
+            path: '/category/add',
+            name: '品类',
+            icon: 'dashboard',
+            component: './Category/Add',
+          },
+          {
+            path: '/category/update',
+            name: '品类',
+            icon: 'dashboard',
+            component: './Category/Update',
+          },
+          {
+            name: '品类详情',
+            path: '/category/detail',
+            icon: 'dashboard',
+            component: './Category/Detail',
+          }
+        ]
+      },
+      {
+        path: '/product',
+        name: '产品管理',
+        icon: 'dashboard',
+        authority: ['root'],
+        routes: [
+          {
+            path: '/product/list',
+            name: '产品列表',
+            icon: 'dashboard',
+            component: './Product/List',
+          }
+        ]
+      },
       // 一级菜单
       {
         // 菜单路径
