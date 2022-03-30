@@ -27,8 +27,6 @@ import moment from 'moment';
 import router from 'umi/router';
 import request from '@/utils/request';
 import { imgUrl } from '@/global';
-import QRCode from 'qrcodejs2';
-import html2canvas from 'html2canvas'
 
 const { RangePicker } = DatePicker;
 /* eslint react/no-multi-comp:0 */
@@ -36,7 +34,6 @@ const { RangePicker } = DatePicker;
 class List extends PureComponent {
   constructor(props) {
     super(props);
-    this.qrcodeRef = React.createRef();
     this.state = {
       list: [],
       categoryList: []
@@ -47,7 +44,6 @@ class List extends PureComponent {
     // 组件首次加载时请求列表
     this.handleSearch();
     this.getCategoryList();
-    // this.generateQrCode();
   }
 
   loading = flag => {
@@ -102,14 +98,6 @@ class List extends PureComponent {
         this.loading();
     });
 }
-
-  generateQrCode = () => {
-    new QRCode(this.qrcodeRef.current, {
-      text: 'Lu',
-      width: 100,
-      height: 100
-    })
-  }
 
   // 重置
   handleFormReset = () => {
