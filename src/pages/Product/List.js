@@ -74,7 +74,7 @@ class List extends PureComponent {
           method: 'POST',
           data: values,
         }).then(res => {
-          if (res.code === 'SUCCESS') {
+          if (res && res.code === 'SUCCESS') {
             this.setState({
               list: res.data,
             });
@@ -94,7 +94,7 @@ class List extends PureComponent {
         method: 'POST',
         data: {},
     }).then(res => {
-        if (res.code === 'SUCCESS') {
+        if (res && res.code === 'SUCCESS') {
         this.setState({
             categoryList: res.data,
         });
@@ -173,7 +173,7 @@ class List extends PureComponent {
         id: record.id,
       },
     }).then(res => {
-      if (res.code === 'SUCCESS') {
+      if (res && res.code === 'SUCCESS') {
         notification.success({
           message: res.code,
           description: res.msg,
