@@ -77,7 +77,8 @@ export default {
   },
   proxy: {
     '/empty-item/': {
-      target: 'http://127.0.0.1:4000/',
+      // target: 'http://127.0.0.1:4000/',
+      target: 'http://119.45.163.156:4000/',
     },
   },
 

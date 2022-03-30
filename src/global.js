@@ -66,6 +66,8 @@ if (pwa) {
   });
 }
 // 图片地址，路径为后端项目运行地址
-export const imgUrl = 'http://127.0.0.1:4000';
+// export const imgUrl = 'http://127.0.0.1:4000';
+export const imgUrl = 'http://119.45.163.156:4000';
+
 
 
